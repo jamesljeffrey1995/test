@@ -21,7 +21,6 @@
     action: set
   when:
     - rule_2_2_2
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller1
     - rule_2.2.2
@@ -61,7 +60,6 @@
       action: set
   when:
     - rule_2_2_5
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.5
@@ -103,7 +101,6 @@
     action: set
   when:
     - rule_2_2_8
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.8
@@ -226,7 +223,6 @@
     action: set
   when:
     - rule_2_2_17
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.17
@@ -269,7 +265,6 @@
     action: set
   when: 
     - rule_2_2_20
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.20
@@ -339,7 +334,6 @@
     action: set
   when:
     - rule_2_2_25
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.25
@@ -367,7 +361,6 @@
     action: set
   when:
     - rule_2_2_27
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.27
@@ -424,7 +417,6 @@
     action: set
   when:
     - rule_2_2_31
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.31
@@ -493,7 +485,6 @@
     action: set
   when:
     - rule_2_2_36
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level2-domaincontroller
     - rule_2.2.36
@@ -626,7 +617,6 @@
     action: set
   when:
     - rule_2_2_47
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.2.47
@@ -784,7 +774,6 @@
     type: dword
   when:
     - rule_2_3_5_1
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.3.5.1
@@ -798,7 +787,6 @@
     type: dword
   when:
     - rule_2_3_5_2
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.3.5.2
@@ -812,7 +800,6 @@
     type: dword
   when:
     - rule_2_3_5_3
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.3.5.3
@@ -1202,7 +1189,6 @@
     type: multistring
   when:
     - rule_2_3_10_6
-    - ansible_windows_domain_role == "Primary domain controller"
   tags:
     - level1-domaincontroller
     - rule_2.3.10.6
