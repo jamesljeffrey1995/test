@@ -230,7 +230,7 @@
   win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
       name: DisableExceptionChainValidation
-      data: 1
+      data: 0
       type: dword
       state: present
   when: rule_18_3_4
@@ -1671,9 +1671,9 @@
     - rule_18.9.26.2.2
     - patch
 
-- name: "SCORED | 18.9.26.3.1 | PATCH | (L1) Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+- name: "SCORED | 18.9.26.3.1 | PATCH | L1 Ensure Setup Control Event Log behavior when the log file reaches its maximum size is set to Disabled"
   win_regedit:
-    path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
+    path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
     name: Retention
     data: 0
     type: string
@@ -2285,7 +2285,7 @@
   win_regedit:
     path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging
     name: EnableScriptBlockLogging
-    data: 1
+    data: 0
     type: dword
   when: rule_18_9_95_1
   tags:

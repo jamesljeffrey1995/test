@@ -224,9 +224,11 @@
     - patch
 
 - name: "SCORED | 9.3.1 | PATCH | (L1) Ensure 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)'"
-  win_firewall:
-    state: enabled
-    profile: Public
+  win_regedit:
+    path: HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile
+    name: EnableFirewall
+    data: 1
+    type: dword
   when:
     - rule_9_3_1
   tags:

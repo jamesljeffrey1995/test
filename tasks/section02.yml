@@ -1185,7 +1185,7 @@
   win_regedit:
     path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
     name: NullSessionPipes
-    data: ""
+    data:  ['LSARPC', 'NETLOGON', 'SAMR', 'BROWSER']
     type: multistring
   when:
     - rule_2_3_10_6
